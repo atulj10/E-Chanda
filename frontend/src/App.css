@@ -1,0 +1,14 @@
+.voucher {
+  display: none;
+}
+
+@media print {
+
+  .counter {
+    display: none;
+  }
+  
+  .voucher {
+    display: block;
+  }
+}
