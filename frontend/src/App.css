@@ -1,13 +1,82 @@
+/* Default styling for input */
+input {
+  border: none;
+  outline: none;
+  margin: 0.5% 0;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  color: black;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+  width: 560px;
+  /* Default width */
+}
+
+/* Media query for screens smaller than 350px */
+@media screen and (max-width: 350px) {
+  input {
+    width: 85%;
+    /* Adjust width for smaller screens */
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  #btn {
+    font-size: 0.75rem;
+  }
+}
+
+/* Additional styles for input when focused */
+input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  color: black;
+  box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
+}
+
+/* Button styles */
+button {
+  margin: 1%;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(49, 48, 48);
+  text-shadow: none;
+  /* background: transparent; */
+  cursor: pointer;
+  /* box-shadow: transparent; */
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 30px 30px 59px #b5b5b5,
+    -30px -30px 59px #ffffff;
+  border: none;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+/* Button hover/focus styles */
+button:hover,
+button:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
+}
+
+/* Voucher styling for printing */
 .voucher {
   display: none;
 }
 
 @media print {
-
   .counter {
     display: none;
   }
-  
+
   .voucher {
     display: block;
   }
